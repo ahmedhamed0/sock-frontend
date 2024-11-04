@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Exchange Relation</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+<body>
+<div class="container">
+    <h2>Stock Exchange Relation</h2>
+
+    <!-- Dropdown to select stock exchange -->
+    <label for="stockExchangeSelect">Select Stock Exchange:</label>
+    <select id="stockExchangeSelect" onchange="loadStocks()">
+        <!-- Stock exchange options will be populated here -->
+    </select>
+
+    <!-- List of stocks associated with the selected stock exchange -->
+    <h3>Stocks in Selected Exchange</h3>
+    <table id="stockTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Current Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Stock rows will be populated here -->
+        </tbody>
+    </table>
+
+    <!-- Form to add stocks -->
+    <label for="addStockSelect">Add Stock to Exchange:</label>
+    <select id="addStockSelect">
+        <!-- Available stocks will be populated here -->
+    </select>
+    <button id="addStockToExchangebtn" onclick="addStockToExchange()" style="display: none;">Add Stock</button>
+    <button onclick="window.location.href='/dashboard'">Dashboard</button>
+</div>
+<script src="js/relationhandle.js"></script>
+</body>
+</html>

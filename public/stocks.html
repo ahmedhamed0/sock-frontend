@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stocks</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Stocks</h1>
+        <form id="createStockForm">
+            <input type="text" id="stockName" placeholder="Stock Name" required>
+            <input type="text" id="stockDescription" placeholder="Description" required>
+            <input type="number" id="currentPrice" placeholder="Current Price" required>
+            <button type="submit">Create Stock</button>
+        </form>
+        <form id="updateStockForm" style="display:none">
+            <input type="hidden" id="updatestockId" name="updateid">
+            <label for="updatestockName">Stock Name:</label>
+            <input type="text" id="updatestockName" name="updatename" required>
+            
+            <label for="updatestockDescription">Description:</label>
+            <input type="text" id="updatestockDescription" name="updatedescription" required>
+            
+            <label for="updatecurrentPrice">Current Price:</label>
+            <input type="number" id="updatecurrentPrice" name="updatecurrentPrice" step="0.01" required>
+            
+            <button type="submit">Update Stock</button>
+        </form>
+        <h2>Stock List</h2>
+        <ul id="stockList"></ul>
+        <button onclick="window.location.href='/dashboard'">Dashboard</button>
+    </div>
+    <script src="js/stockhandle.js"></script>
+</body>
+</html>

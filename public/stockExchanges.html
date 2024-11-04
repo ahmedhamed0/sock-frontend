@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Exchanges</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Exchanges</h1>
+        <form id="createStockExchangeForm">
+            <input type="text" id="exchangeName" placeholder="Exchange Name" required>
+            <input type="text" id="exchangeDescription" placeholder="Description" required>
+            <button type="submit">Create Stock Exchange</button>
+        </form>
+        <form id="updateStockExchangeForm" style="display:none">
+            <input type="hidden" id="updateexchangeId" name="updateexchangeId">
+            <input type="text" id="updateexchangeName" placeholder="Exchange Name" required>
+            <input type="text" id="updateexchangeDescription" placeholder="Description" required>
+            <button type="submit">Edit Stock Exchange</button>
+        </form>
+        <h2>Stock Exchange List</h2>
+        <ul id="exchangeList"></ul>
+        <button onclick="window.location.href='/dashboard'">Dashboard</button>
+    </div>
+    <script src="js/exchangehandle.js"></script>
+</body>
+</html>
